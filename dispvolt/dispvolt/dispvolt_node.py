@@ -11,7 +11,7 @@ class DispVolt(Node):
     def __init__(self):
         """コンストラクタ。サブスクライバーを生成する。
         """
-        # Nodeクラスのコンストラクタを呼び出し、'volt_subscriber_node'というノード名をつける。
+        # Nodeクラスのコンストラクタを呼び出し、'disp_volt_node'というノード名をつける。
         super().__init__('disp_volt_node') 
         # サブスクライバーの生成。create_subscriptionの1番目の引数Float32はトピック通信に使うメッセージ型。        
         # 2番目の引数'battery/voltage'はトピック名。
@@ -43,9 +43,9 @@ class DispVolt(Node):
    
 def main(args=None):
     rclpy.init(args=args)           # rclpyモジュールの初期化
-    volt_subscriber = DispVolt()    # ノードの作成
-    rclpy.spin(volt_subscriber)     # コールバック関数が呼び出し
-    volt_subscriber.destory_node()  # ノードの破壊
+    disp_volt = DispVolt()          # ノードの作成
+    rclpy.spin(disp_volt)           # コールバック関数が呼び出し
+    disp_volt.destory_node()        # ノードの破壊
     rclpy.shutdown()                # rclpyモジュールの終了処理
 
 if __name__ == '__main__':
