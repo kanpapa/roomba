@@ -1,5 +1,6 @@
 # dispvolt_node.py
-# The node that displays the Roomba's battery voltage on the Roomba's LED.
+# ルンバのバッテリー電圧をルンバのLEDに表示するノード
+# https://demura.net/robot/ros2/20748.html を参考にしています。
 import rclpy  # ROS2のPythonモジュールをインポート
 from rclpy.node import Node # rclpy.nodeモジュールからNodeクラスをインポート
 from std_msgs.msg import Float32 # トピック通信に使うFloat32メッセージ型をインポート
